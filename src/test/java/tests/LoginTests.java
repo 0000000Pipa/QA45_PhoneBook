@@ -32,10 +32,12 @@ public class LoginTests extends ApplicationManager {
         new HomePage(getDriver()).clickBtnLoginHeader();
         new LoginRegPage(getDriver()).typeLoginForm(user);
         Assert.assertTrue(new ContactsPage(getDriver()).isSignOutPresent());
-
-
-
-
-
+    }
+    @Test
+    public void loginNegativeTest_emptyEmail(){
+        UserDto user = new UserDto(" ", password);
+        new HomePage(getDriver()).clickBtnLoginHeader();
+        new LoginRegPage(getDriver()).typeLoginForm(user);
+        Assert.assertTrue(new LoginRegPage(getDriver()).validateErrorMessageLogin("Login Failed with code 401"));
     }
 }

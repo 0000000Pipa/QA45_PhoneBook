@@ -1,11 +1,14 @@
 package pages;
 
 import dto.UserDto;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginRegPage extends BasePage {
     public LoginRegPage(WebDriver driver){
@@ -23,6 +26,9 @@ public class LoginRegPage extends BasePage {
     @FindBy(xpath = "//button[text()='Registration']")
     WebElement btnRegistration;
 
+    @FindBy (xpath = "//div[@style='color: red; text-align: center; margin-bottom: 10px;']")
+    WebElement errorMessage;
+
     public void typeLoginForm(String email, String password) {
         inputEmail.sendKeys(email);
         inputPassword.sendKeys(password);
@@ -38,8 +44,19 @@ public class LoginRegPage extends BasePage {
         inputEmail.sendKeys(email);
         inputPassword.sendKeys(password);
         btnRegistration.click();
-
-
-
         }
+
+    public void closeAlert() {
+        Alert alert = new WebDriverWait(driver, 5)
+                .until(ExpectedConditions.alertIsPresent());
+        System.out.println(alert.getText());
+        alert.accept();
+
+    }
+
+    public boolean validateErrorMessageLogin(String text) {
+        pause(2);
+        return isElementContainsText(errorMessage, text);
+
+    }
 }
