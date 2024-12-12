@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="187629b1-7b46-4c82-b8b1-097e874b7a0b" name="Changes" comment="New project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="187629b1-7b46-4c82-b8b1-097e874b7a0b" name="Changes" comment="LoginPage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,18 +51,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.LoginTests.loginPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationPossitiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.LoginTests.loginNegativeTest_emptyEmail.executor": "Run",
+    "Gradle.LoginTests.loginPositiveTest.executor": "Run",
+    "Gradle.RegistrationTests.executor": "Run",
+    "Gradle.RegistrationTests.registrationNegativeTest.executor": "Run",
+    "Gradle.RegistrationTests.registrationNegativeTest_wrongEmail.executor": "Run",
+    "Gradle.RegistrationTests.registrationPossitiveTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.LoginTests.loginPositiveTest">
+}]]></component>
+  <component name="RunManager" selected="Gradle.LoginTests.loginNegativeTest_emptyEmail">
+    <configuration name="LoginTests.loginNegativeTest_emptyEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.LoginTests.loginNegativeTest_emptyEmail&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -113,7 +138,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registrationPossitiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RegistrationTests.registrationNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -126,7 +151,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.RegistrationTests.registrationPossitiveTest&quot;" />
+            <option value="&quot;tests.RegistrationTests.registrationNegativeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RegistrationTests.registrationNegativeTest_wrongEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.RegistrationTests.registrationNegativeTest_wrongEmail&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -139,9 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LoginTests.loginNegativeTest_emptyEmail" />
+        <item itemvalue="Gradle.RegistrationTests.registrationNegativeTest_wrongEmail" />
+        <item itemvalue="Gradle.RegistrationTests.registrationNegativeTest" />
         <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
         <item itemvalue="Gradle.RegistrationTests" />
-        <item itemvalue="Gradle.RegistrationTests.registrationPossitiveTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,11 +236,20 @@
       <option name="project" value="LOCAL" />
       <updated>1732818936643</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="LoginPage">
+      <option name="closed" value="true" />
+      <created>1733424032693</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733424032693</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New project" />
-    <option name="LAST_COMMIT_MESSAGE" value="New project" />
+    <MESSAGE value="LoginPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="LoginPage" />
   </component>
 </project>
