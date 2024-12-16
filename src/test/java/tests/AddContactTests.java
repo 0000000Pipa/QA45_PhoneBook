@@ -24,7 +24,8 @@ public class AddContactTests extends ApplicationManager {
         new HomePage(getDriver()).clickBtnLoginHeader();
         new LoginRegPage(getDriver()).typeLoginForm(user);
         new ContactsPage(getDriver()).clickBtnAdd();
-        AddPage addPage = new AddPage(getDriver());
+        addPage = new AddPage(getDriver());
+
     }
 
     @Test(invocationCount = 1)
