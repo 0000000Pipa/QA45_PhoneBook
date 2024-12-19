@@ -4,38 +4,42 @@ import dto.ContactDtoLombok;
 import org.testng.annotations.DataProvider;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import static utils.RandomUtils.*;
 import static utils.RandomUtils.generateString;
 
 public class DPContact {
+
     @DataProvider
-    public ContactDtoLombok [] newContactDP(){
+    public ContactDtoLombok[] newContactDP() {
         ContactDtoLombok contact1 = ContactDtoLombok.builder()
                 .name("dp_" + generateString(5))
                 .lastName(generateString(10))
                 .email(generateEmail(7))
                 .phone(generatePhone(12))
-                .address("Address" + generateString(10))
+                .address("Address " + generateString(10))
                 .build();
         ContactDtoLombok contact2 = ContactDtoLombok.builder()
                 .name("dp_" + generateString(5))
                 .lastName(generateString(10))
                 .email(generateEmail(7))
                 .phone(generatePhone(12))
-                .address("Address" + generateString(10))
+                .address("Address " + generateString(10))
                 .build();
         ContactDtoLombok contact3 = ContactDtoLombok.builder()
                 .name("dp_" + generateString(5))
                 .lastName(generateString(10))
                 .email(generateEmail(7))
                 .phone(generatePhone(12))
-                .address("Address" + generateString(10))
+                .address("Address " + generateString(10))
                 .build();
-        return new ContactDtoLombok[] {contact1,contact2, contact3 };
-
+        return new ContactDtoLombok[]{contact1, contact2, contact3};
     }
 
     @DataProvider
@@ -62,4 +66,5 @@ public class DPContact {
         }
         return contactList.listIterator();
     }
+
 }
